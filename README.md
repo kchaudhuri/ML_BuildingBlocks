@@ -7,7 +7,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 ## 🧠 Algorithms (From Scratch)
 
 - [x] Linear Regression
-- [ ] Logistic Regression (Binary Classification)
+- [x] Logistic Regression (Binary Classification)
 - [ ] K-Nearest Neighbors (KNN)
 - [ ] Decision Tree Classifier
 - [ ] Naive Bayes Classifier (Gaussian)
