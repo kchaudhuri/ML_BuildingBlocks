@@ -5,11 +5,16 @@ Simple Linear Regrassion Algo
 import numpy as np
 
 class LinearRegression:
+
     def __init__(self):
+
         self.weights = None
         self.bias = None
 
     def fit(self, X, y):
+        """
+        Training function
+        """
         
         # convert X and y to numpy array
         X = np.asarray(X)
@@ -44,19 +49,24 @@ class LinearRegression:
         self.weights = theta_best[1:]
 
     def predict(self, X):
+
         X = np.asarray(X)
+
         return X @ self.weights + self.bias
 
     def score(self, X, y):
+
         """Calculate R² score"""
         y_pred = self.predict(X)
         ss_total = np.sum((y - np.mean(y)) ** 2)
         ss_residual = np.sum((y - y_pred) ** 2)
+
         return 1 - (ss_residual / ss_total)
 
 
 
 if __name__ == "__main__":
+
     # Dummy data
     X = np.array([[1], [2], [4], [3], [5]])
     y = np.array([1, 3, 3, 2, 5])
