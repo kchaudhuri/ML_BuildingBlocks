@@ -6,7 +6,9 @@ import numpy as np
 from collections import Counter
 
 class KNN:
+
     def __init__(self, k=3):
+
         self.k = k
     
     def fit(self, X, y):
@@ -18,8 +20,11 @@ class KNN:
         self.y_train = y
     
     def _euclidean_distance(self, x1, x2):
+        """
+        Distance calculation
+        """
 
-        return np.sqrt(np.sum((x1 - x2) **2))
+        return np.sqrt(np.sum((x1 - x2)**2))
     
     def _predict_single_point(self, x):
 
