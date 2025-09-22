@@ -1,4 +1,6 @@
-
+"""
+Simple Neuron implementation
+"""
 
 import numpy as np
 
@@ -11,9 +13,16 @@ class Neuron:
         self.examples = examples
         self.train()
 
-    def forward():
+    def _sigmoid(z):
 
-        return
+        return 1.0 / (1.0 + np.exp(-z))
+
+    def forward(self, X):
+
+        z = X @ self.weights[:3] + self.weights[3]
+        y_hat = self._sigmoid(z)
+
+        return y_hat
 
     def calculate_loss():
 
@@ -25,9 +34,16 @@ class Neuron:
             for batch in range(int(self.examples.shape[0]//batch_size)):
 
                 batch_idx = batch * batch_size
+
                 #forward
+                output = forward(self.examples['features'])
+
                 #loss
+                loss = calculate_loss(gt, output)
+
                 #gradient
+
+
                 #step backward
                 
         pass
