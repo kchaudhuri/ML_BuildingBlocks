@@ -40,7 +40,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 ## ⚙️ Core ML Operations
 
-- [ ] Basic Statistics
+- [x] Basic Statistics
 - [x] Sparse Matrix Multiplication
 - [ ] Train-Test Split
 - [ ] Min-Max Scaling
@@ -50,6 +50,10 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 - [ ] Feature Vectorization using `numpy`
 
 ---
+
+## ⚙️ Natural Language Processing
+
+- [X] Remove Stop words
 
 ✨ Author
 
