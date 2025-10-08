@@ -8,11 +8,11 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 - [x] Linear Regression
 - [x] Logistic Regression (Binary Classification)
-- [ ] K-Nearest Neighbors (KNN)
+- [x] K-Nearest Neighbors (KNN)
 - [ ] Decision Tree Classifier
 - [ ] Naive Bayes Classifier (Gaussian)
-- [ ] Perceptron Algorithm
-- [ ] K-Means Clustering
+- [ ] Perceptron Algorithm (Neuron)
+- [x] K-Means Clustering
 - [ ] Principal Component Analysis (PCA)
 
 ---
