@@ -11,7 +11,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 - [x] K-Nearest Neighbors (KNN)
 - [ ] Decision Tree Classifier
 - [ ] Naive Bayes Classifier (Gaussian)
-- [ ] Perceptron Algorithm (Neuron)
+- [x] Perceptron Algorithm (Neuron)
 - [x] K-Means Clustering
 - [ ] Principal Component Analysis (PCA)
 
@@ -38,6 +38,15 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 ---
 
+## Non-Linear Functions
+
+- [x] Softmax
+- [x] Sigmoid
+- [x] ReLU
+- [x] Leaky ReLU
+
+---
+
 ## ⚙️ Core ML Operations
 
 - [x] Basic Statistics
@@ -51,7 +60,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 ---
 
-## ⚙️ Natural Language Processing
+## 💬 Natural Language Processing
 
 - [X] Remove Stop words
 

@@ -7,7 +7,18 @@ import numpy as np
 
 class NonLinear():
 
-    def softmax():
+    def softmax(x):
+        """
+        Softmax function
+
+        Args:
+            x (float or np.ndarray): Input array.
+
+        Returns:
+            np.ndarray: Output after applying Softmax.
+        """
+         
+        return np.exp(x) / np.sum(np.exp(x))  # But not numerically stable, might overshoot to infinity
 
     def sigmoid(x):
 
@@ -49,4 +60,4 @@ class NonLinear():
              np.ndarray: Output after applying Leaky ReLU.
         """
 
-        return np.where(x > 0, x, x * alpha) # If positive value then as is else value multiplied by alpha factor
+        return np.where(x > 0, x, x * alpha)  # If positive value then as is else value multiplied by alpha factor
