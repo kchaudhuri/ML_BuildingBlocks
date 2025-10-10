@@ -9,15 +9,27 @@ class NonLinear():
 
     def softmax():
 
-    def sigmoid():
+    def sigmoid(x):
+
+        """
+        Sigmoid (Logistic) function
+
+        Args:
+            x (float or np.ndarray): Input array.
+
+        Returns:
+            np.ndarray: Output after applying Sigmoid.
+        """
+
+        return 1/(1 + np.exp(-x))
 
     def relu(x):
 
         """
         Rectified Linear Unit
-        
+
         Args:
-            x (float or np.ndarray): Input value or array.
+            x (float or np.ndarray): Input array.
 
         Returns:
             np.ndarray: Output after applying ReLU.
@@ -25,4 +37,16 @@ class NonLinear():
         
         return np.maximum(0, x)
 
-    def leaky_relu():
+    def leaky_relu(x, alpha=0.01):
+
+        """
+        Leaky Rectified Linear Unit
+
+        Args:
+            x (float or np.ndarray): Input array.
+
+        Returns:
+             np.ndarray: Output after applying Leaky ReLU.
+        """
+
+        return np.where(x > 0, x, x * alpha) # If positive value then as is else value multiplied by alpha factor
