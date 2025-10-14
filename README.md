@@ -51,7 +51,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 - [x] Basic Statistics
 - [x] Sparse Matrix Multiplication
-- [ ] Train-Test Split
+- [x] Train-Test Split
 - [ ] Min-Max Scaling
 - [ ] Z-Score Standardization
 - [ ] One-Hot Encoding
