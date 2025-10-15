@@ -52,8 +52,8 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 - [x] Basic Statistics
 - [x] Sparse Matrix Multiplication
 - [x] Train-Test Split
-- [ ] Min-Max Scaling
-- [ ] Z-Score Standardization
+- [x] Min-Max Scaling
+- [x] Z-Score Standardization
 - [ ] One-Hot Encoding
 - [ ] Missing Value Imputation (mean/median)
 - [ ] Feature Vectorization using `numpy`
