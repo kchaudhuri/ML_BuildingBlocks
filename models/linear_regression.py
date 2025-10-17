@@ -6,47 +6,79 @@ import numpy as np
 
 class LinearRegression:
 
-    def __init__(self):
+    def __init__(self, lr, epochs):
 
         self.weights = None
         self.bias = None
+
+        self.learning_rate = lr
+        self.epochs = epochs
 
     def fit(self, X, y):
         """
         Training function
         """
         
-        # convert X and y to numpy array
-        X = np.asarray(X)
-        y = np.asarray(y)
+        # # convert X and y to numpy array
+        # X = np.asarray(X)
+        # y = np.asarray(y)
         
         # Get number of samples
-        n_samples = X.shape[0]
+        n_samples, n_features = X.shape
 
-        # Create bias column (intercept term)
-        bias_column = np.ones((n_samples, 1))
+        self.weights = np.zeros(n_samples)
+        self.bias = 0
 
-        # Concatenate bias and original X
-        X_b = np.concatenate([bias_column, X], axis=1)
+        for epoch, _ in enumerate(range(self.epochs)):
+
+            print(f'Epoch #{epoch}/{self.epochs}')
+
+            # Predict output
+            y_hat = np.dot(X, self.weights) + self.bias
+
+            # Compute loss
+            mse_loss = np.mean((y_hat - y) **2)
+
+            # Compute gradients
+            dw = (1/n_samples) * np.dot(X.T, mse_loss)
+            db = (1/n_samples) * np.sum(mse_loss)
+
+            # Update weights & biases
+            self.weights -= self.learning_rate * dw
+            self.bias -= self.learning_rate * db
+
+        # # OLS Method
+        # # convert X and y to numpy array
+        # X = np.asarray(X)
+        # y = np.asarray(y)
         
-        # Normal Equation: (X^T * X)^(-1) * X^T * y
-        # Transpose of the feature matrix
-        X_transpose = X_b.T
+        # # Get number of samples
+        # n_samples = X.shape[0]
 
-        # Compute X^T * X
-        XTX = X_transpose @ X_b
+        # # Create bias column (intercept term)
+        # bias_column = np.ones((n_samples, 1))
 
-        # Compute the pseudo-inverse of (X^T * X)
-        XTX_inv = np.linalg.pinv(XTX)
+        # # Concatenate bias and original X
+        # X_b = np.concatenate([bias_column, X], axis=1)
+        
+        # # Normal Equation: (X^T * X)^(-1) * X^T * y
+        # # Transpose of the feature matrix
+        # X_transpose = X_b.T
 
-        # Compute X^T * y
-        XTy = X_transpose @ y
+        # # Compute X^T * X
+        # XTX = X_transpose @ X_b
 
-        # Compute theta (weights and bias)
-        theta_best = XTX_inv @ XTy
+        # # Compute the pseudo-inverse of (X^T * X)
+        # XTX_inv = np.linalg.pinv(XTX)
 
-        self.bias = theta_best[0]
-        self.weights = theta_best[1:]
+        # # Compute X^T * y
+        # XTy = X_transpose @ y
+
+        # # Compute theta (weights and bias)
+        # theta_best = XTX_inv @ XTy
+
+        # self.bias = theta_best[0]
+        # self.weights = theta_best[1:]
 
     def predict(self, X):
 
