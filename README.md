@@ -6,7 +6,7 @@ A hands-on, from-scratch implementation of foundational Machine Learning concept
 
 ## 🧠 Algorithms (From Scratch)
 
-- [x] Linear Regression
+- [x] Linear Regression (Iterative & OLS)
 - [x] Logistic Regression (Binary Classification)
 - [x] K-Nearest Neighbors (KNN)
 - [ ] Decision Tree Classifier
