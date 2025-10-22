@@ -1,5 +1,5 @@
 """
-Simple Linear Regrassion Algo
+Simple Linear Regression Algo
 """
 
 import numpy as np
@@ -26,7 +26,7 @@ class LinearRegression:
         # Get number of samples
         n_samples, n_features = X.shape
 
-        self.weights = np.zeros(n_samples)
+        self.weights = np.zeros(n_features)
         self.bias = 0
 
         for epoch, _ in enumerate(range(self.epochs)):
@@ -47,38 +47,6 @@ class LinearRegression:
             self.weights -= self.learning_rate * dw
             self.bias -= self.learning_rate * db
 
-        # # OLS Method
-        # # convert X and y to numpy array
-        # X = np.asarray(X)
-        # y = np.asarray(y)
-        
-        # # Get number of samples
-        # n_samples = X.shape[0]
-
-        # # Create bias column (intercept term)
-        # bias_column = np.ones((n_samples, 1))
-
-        # # Concatenate bias and original X
-        # X_b = np.concatenate([bias_column, X], axis=1)
-        
-        # # Normal Equation: (X^T * X)^(-1) * X^T * y
-        # # Transpose of the feature matrix
-        # X_transpose = X_b.T
-
-        # # Compute X^T * X
-        # XTX = X_transpose @ X_b
-
-        # # Compute the pseudo-inverse of (X^T * X)
-        # XTX_inv = np.linalg.pinv(XTX)
-
-        # # Compute X^T * y
-        # XTy = X_transpose @ y
-
-        # # Compute theta (weights and bias)
-        # theta_best = XTX_inv @ XTy
-
-        # self.bias = theta_best[0]
-        # self.weights = theta_best[1:]
 
     def predict(self, X):
 
